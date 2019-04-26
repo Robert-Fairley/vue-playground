@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <Doc componentTitle="Test" />
+    <!--<HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
     <Counter count=0 />
     <Name />
   </div>
@@ -12,10 +13,14 @@ import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 import Counter from './components/Counter.vue';
 import Name  from './components/Name.vue';
+import Doc from './components/Doc.vue';
+
+require("./assets/vue-nestable.css");
 
 @Component({
   components: {
-    HelloWorld,
+    //HelloWorld,
+    Doc,
     Counter,
     Name,
   },
