@@ -7,7 +7,14 @@
             So far, I've met:
             <br/>
             <span class="list">
-                {{listNames()}}
+                <ul v-if="names.length > 0">
+                    <li v-for="(name, idx) in names" :key="idx">
+                        {{name}}
+                    </li>
+                </ul>
+                <div v-else>
+                    Guestbook is empty.
+                </div>
             </span>
         </div>
         <div id="form">
